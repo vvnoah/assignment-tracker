@@ -10,3 +10,19 @@
     $course_id = filter_input(INPUT_POST, 'course_id', FILTER_VALIDATE_INT);
     if(!$course_id){ filter_input(INPUT_GET, 'course_id', FILTER_VALIDATE_INT); } // NULL or false is allowed
     $course_name = filter_input(INPUT_POST, 'course_name', FILTER_VALIDATE_STRING);
+    
+    // Routing
+    $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
+    if(!action){
+        $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+        if(!action){ $action = 'list_assignments'; }
+    }
+    
+    switch($action){
+        default:
+            $course_name = get_course_name($course_id);
+            $courses = get_courses();
+            $assignments = get_assignments_by_course($course_id);
+            include('views/list-assignments.php');
+            break;
+    }

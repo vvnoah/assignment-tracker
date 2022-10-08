@@ -2,11 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Assignment Tracker</title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+        <main class="main">

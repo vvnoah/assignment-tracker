@@ -8,6 +8,6 @@
     } catch (PDOException $ex) {
         $error = 'Database error: ';
         $error .= $ex->getMessage();
-        include(views/error.php);
+        include('views/error.php');
         exit();
     }

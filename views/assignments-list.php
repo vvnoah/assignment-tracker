@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="list__remove_item">
-                <form action=".">
+                <form action="." method="post">
                     <input type="hidden" name="action" value="delete_assignment">
                     <input type="hidden" name="assignment_id" value="<?php echo $assignment['assignment_id'] ?>">
                     <button class="remove_button">Delete</button>

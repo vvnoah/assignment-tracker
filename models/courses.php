@@ -18,7 +18,7 @@
         $statement->execute();
         $course = $statement->fetch();
         $statement->closeCursor();
-        $course_name = course['course_name'];
+        $course_name = $course['course_name'];
         return $course_name;
     }
     

@@ -2,6 +2,7 @@
     function get_assignments_by_course($course_id){
         global $database;
         if($course_id){
+            echo $course_id;
             $query = 'SELECT A.assignment_id, A.assignment_description, C.course_name FROM assignments A LEFT JOIN courses C ON A.course_id = C.course_id WHERE A.course_id = :course_id ORDER BY assignment_id';
         }else{
             $query = 'SELECT A.assignment_id, A.assignment_description, C.course_name FROM assignments A LEFT JOIN courses C ON A.course_id = C.course_id ORDER BY C.course_id';

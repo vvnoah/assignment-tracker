@@ -10,10 +10,11 @@
                 <div class="list__item">
                     <p><?php echo $course['course_name'] ?></p>
                 </div>
-                <div class=""list__remove_item>
+                <div class="list__remove_item">
                     <form action="." method="post">
                         <input type="hidden" name="action" value="delete_course">
-                        <input type="hidden" name="course_id" value="<?php $course['course_id'] ?>">
+                        <input type="hidden" name="course_id" value="<?php echo $course['course_id'] ?>">
+                        <button class="remove_button">Delete</button>
                     </form>
                 </div>
             </div>

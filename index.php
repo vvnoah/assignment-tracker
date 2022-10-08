@@ -21,7 +21,7 @@
     switch($action){
         case "list_courses":
             $courses = get_courses();
-            include('views/list-courses.php');
+            include('views/courses-list.php');
             break;
         case "add_course":
             add_course($course_name);
@@ -41,7 +41,7 @@
             if($course_id){
                 try {
                     delete_course($course_id);
-                } catch (PDOException $e){
+                } catch (PDOException $ex){
                     $error = "You cannot delete a course if assignments exist for it.";
                     include('views/error.php');
                     exit();
@@ -54,6 +54,7 @@
                 delete_assignment($assignment_id);
                 header('Location: .?course_id=$course_id');
             } else {
+                console.log('Hey');
                 $error = "Missing or incorrect assignment id.";
                 include('views/error.php');
             }
@@ -62,5 +63,5 @@
             $course_name = get_course_name($course_id);
             $courses = get_courses();
             $assignments = get_assignments_by_course($course_id);
-            include('views/list-assignments.php');
+            include('views/assignments-list.php');
     }

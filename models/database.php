@@ -9,4 +9,5 @@
         $error = 'Database error: ';
         $error .= $ex->getMessage();
         include(views/error.php);
+        exit();
     }

@@ -8,12 +8,12 @@
             <select name="course_id" required>
                 <option value="0">View all</option>
                 <?php foreach($courses as $course){ ?>
-                    <?php if ($course_id == $course['course-id']){?>
-                        <option value="<?php echo $course['course-id'] ?>" selected>
+                    <?php if ($course_id == $course['course_id']){?>
+                        <option value="<?php echo $course['course_id'] ?>" selected>
                     <?php } else { ?>
-                        <option value="<?php echo $course['course-id'] ?>">                        
+                        <option value="<?php echo $course['course_id'] ?>">                        
                     <?php } ?>
-                        <?php echo $course['course-name'] ?>
+                        <?php echo $course['course_name'] ?>
                         </option>
                 <?php } ?>
             </select>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="list__remove_item">
-                <<form action=".">
+                <form action=".">
                     <input type="hidden" name="action" value="delete_assignment">
                     <input type="hidden" name="assignment_id" value="<?php echo $assignment['assignment_id'] ?>">
                     <button class="remove_button">Delete</button>
@@ -58,7 +58,7 @@
                 <?php } ?>
             </select>
             <label>description:</label>
-            <input type="text" name="assignment_description" maxlength="50" placeholder="Description" required>
+            <input type="text" name="assignment_description" maxlength="50" placeholder="description" required>
         </div>
         <div class="add__add_item">
             <button class="add_button bold">Add</button>

@@ -25,10 +25,10 @@
     
     function add_assignment($course_id, $assignment_description){
         global $database;
-        $query = 'INSERT INTO assignments (assignment_description, course_id) VALUES (:course_id, :assignment_description)';
+        $query = 'INSERT INTO assignments (assignment_description, course_id) VALUES (:assignment_description, :course_id)';
         $statement = $database->prepare($query);
-        $statement->bindValue(':course_id', $course_id);
         $statement->bindValue(':assignment_description', $assignment_description);
+        $statement->bindValue(':course_id', $course_id);
         $statement->execute();
         $statement->closeCursor();
     }

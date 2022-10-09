@@ -27,13 +27,13 @@
                     <p class="bold"><?php echo $assignment['course_name'] ?></p>
                     <p><?php echo $assignment['assignment_description'] ?></p>
                 </div>
-            </div>
-            <div class="list__remove_item">
-                <form action="." method="post">
-                    <input type="hidden" name="action" value="delete_assignment">
-                    <input type="hidden" name="assignment_id" value="<?php echo $assignment['assignment_id'] ?>">
-                    <button class="remove_button">Delete</button>
-                </form>
+                <div class="list__remove_item">
+                    <form action="." method="post">
+                        <input type="hidden" name="action" value="delete_assignment">
+                        <input type="hidden" name="assignment_id" value="<?php echo $assignment['assignment_id'] ?>">
+                        <button class="remove_button">❌</button>
+                    </form>
+                </div>
             </div>
         <?php } ?>
     <?php } else if ($course_id) { ?>

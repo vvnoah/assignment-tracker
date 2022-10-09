@@ -39,9 +39,11 @@
     <?php } else if ($course_id) { ?>
         <br>
         <p>No assignments exist for this course yet.</p>
+        <br>
     <?php } else { ?>
         <br>
         <p>No assignments exist yet.</p>
+        <br>
     <?php } ?>
 </section>
 
@@ -65,7 +67,7 @@
         </div>
     </form>
 </section>
-
+<br>
 <p><a href=".?action=list_courses">View &amp; edit courses</a></p>
 
 <?php include('footer.php') ?>

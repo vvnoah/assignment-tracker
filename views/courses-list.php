@@ -1,10 +1,10 @@
 <?php include('header.php') ?>
 
-<?php if($courses){ ?>
-    <section id="list" class="list">
-        <header class="list__row list__header">
-            <h1>Courses</h1>
-        </header>
+<section id="list" class="list">
+    <header class="list__row list__header">
+        <h1>Courses</h1>
+    </header>
+    <?php if($courses){ ?>
         <?php foreach($courses as $course){ ?>
             <div class="list__row">
                 <div class="list__item">
@@ -19,10 +19,12 @@
                 </div>
             </div>
         <?php } ?>
-    </section>
-<?php } else { ?>
+    <?php } else { ?>
+    <br>
     <p>No courses exist yet.</p>
-<?php } ?>
+    <br>
+    <?php } ?>
+</section>
    
 <section id="add" class="add">
     <h2>Add course</h2>

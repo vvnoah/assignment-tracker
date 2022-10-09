@@ -14,7 +14,7 @@
                     <form action="." method="post">
                         <input type="hidden" name="action" value="delete_course">
                         <input type="hidden" name="course_id" value="<?php echo $course['course_id'] ?>">
-                        <button class="remove_button">Delete</button>
+                        <button class="remove_button">❌</button>
                     </form>
                 </div>
             </div>

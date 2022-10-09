@@ -39,7 +39,6 @@
         </div>
     </form>
 </section>
-    
 <br>
 <p><a href=".">View &amp; add assignments</a></p>
     

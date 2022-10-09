@@ -21,7 +21,7 @@
     switch($action){
         case "list_courses":
             $courses = get_courses();
-            include('views/courses-list.php');
+            include('views/courses.php');
             break;
         case "add_course":
             add_course($course_name);
@@ -63,5 +63,5 @@
             $course_name = get_course_name($course_id);
             $courses = get_courses();
             $assignments = get_assignments_by_course($course_id);
-            include('views/assignments-list.php');
+            include('views/assignments.php');
     }
